@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy women's day</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+            text-align: center;
+            z-index: 1;
+            margin: 20px;
+        }
+
+        h1 { color: #d63384; font-size: 24px; }
+        p { color: #555; line-height: 1.6; font-size: 18px; }
+
+        /* Зүрхэн хөдөлгөөн */
+        .heart {
+            position: fixed;
+            top: -10%;
+            font-size: 20px;
+            color: #ff4d6d;
+            user-select: none;
+            z-index: 0;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 Юуны өмнө тандаа эмэгтэйчүүдийн эрхийг хамгаалах өдрийн мэнд хүргэе.😘 Та бол миний хамгийн сайн ээж, хамгийн сайн зөвлөгч минь юм шүү. ❤️</h1>
+        <p>
+            <br>Таныхаа хүчинд охин нь өдий зэрэгтээ яваа юм шүү ээжээ. ❤️✨Үргэлжид санаа тавьж байгаа бүхнээ бидэндээ зориулдагт баярлалаа. 🔋✨Охин нь ачийг нь заавал хариулна ээжээ!✨ Та хоёр минь одоо биеэ бодож, эрүүл байж үр хүүхдүүд бидэнтэйгээ он удаан жил хамт байгаарай. 🐥Тандаа хязгаар үгүй их хайртай шүү. ✨💕 Таны хайртай охин: Уранцэцэг -с. ❤️ Хайртай ээж: Чулуунцэцэг -д 💕 <br>
+            2026.03.08 🎀✨
+            Таны минь инээмсэглэл миний ертөнцийн гэрэл гэгээ юм шүү.☀️🌷 I love you my world. 🌍🌙✨
+        </p>
+        <p><b>Үргэлж хайртай.</b></p>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.opacity = Math.random();
+            document.body.appendChild(heart);
+
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
+
+index.html
